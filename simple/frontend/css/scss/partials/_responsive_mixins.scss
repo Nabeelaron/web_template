@@ -1,0 +1,6 @@
+// contains all the media queries for the site
+@mixin responsive_mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}

@@ -1,0 +1,24 @@
+@import "partials";
+//
+@import url();
+@import "http://";
+@import "filename.css";
+@import "style-screen" screen;
+//
+* {
+    @include mixin-name;
+    @include mixin-name() {}
+}
+
+%no-css-gen-parent-class {}
+
+.parent-class {}
+
+.child-class {
+    @extend .parent-class; //extend directive
+    @extend .non-existing-class !optional;
+}
+
+// mixins -> fewer code generated but replicated styles;
+// slow(but faster when gzipped)
+// extend -> larger code but no replication styles;

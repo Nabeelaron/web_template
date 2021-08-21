@@ -1,0 +1,21 @@
+@mixin mixin-name {}
+
+// SCSS
+@mixin context--alternate-template {
+    margin: 0;
+    font-size: 14px;
+    @content; //injection
+}
+
+.content-sample {
+    @include context--alternate-template {
+        background-color: black;
+    }
+}
+
+// CSS
+.content-sample {
+    margin: 0;
+    font-size: 14px;
+    background-color: black;
+}
